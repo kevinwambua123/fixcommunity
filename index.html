@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CommunityFix</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <header class="haeder">
+      <nav class="navbar">
+        <img src="images/logo.jpg" width="50" />
+        <span>communityFix</span><br />KENYA
+        <ul class="nav-links">
+          <li class="active">Hpme</li>
+          <li>View Reports</li>
+          <li>Report Issue</li>
+          <li>About us</li>
+          <li>contact</li>
+        </ul>
+        <div class="nav-btn">
+          <button>Login / sign in</button>
+        </div>
+      </nav>
+    </header>
+    <!-- HERO SECTION -->
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h3 class="ligt-green">A CLEANER ,SAFER,BETTER, KENYA</h3>
+          <h2>See a problem.<br />Report it.Help fix it.</h2>
+          <p class="small-text">
+            CommunityFix Kenya is a platform where citizens can report<br />community
+            issues such as potholes , broken sewage pipes,<br />overflowing ,
+            rubbish,damaged streetlights and more.
+          </p>
+        </div>
+        <div class="hero-icons">
+          <div class="hero-icon">
+            <img src="images/camera.png" widt="20" />
+            <p>upload<br />photos,videos</p>
+          </div>
+          <div class="hero-icon">
+            <img src="images/location.png" width="20" />
+            <p>Add location<br />(county&Area)</p>
+          </div>
+          <div class="hero-icon">
+            <img src="images/tracking.png" width="20" />
+            <p>Track process<br />in real time</p>
+          </div>
+        </div>
+
+        <!-- QUICK REPORT FORM -->
+         
+        <div class="quick-report">
+          <h2>Quick Report</h2>
+          <p>Report a problem in your area in seconds</p>
+          <form class="report-form">
+            <label for="county">Select county</label>
+            <select class="county" name="county" required>
+              <option value="">select county</option>
+              <option>Mombasa</option>
+              <option>Kwale</option>
+              <option>Kilifi</option>
+              <option>Tana River</option>
+              <option>Lamu</option>
+              <option>Taita-Taveta</option>
+              <option>Garissa</option>
+              <option>Wajir</option>
+              <option>Mandera</option>
+              <option>Marsabit</option>
+              <option>Isiolo</option>
+              <option>Meru</option>
+              <option>Tharaka-Nithi</option>
+              <option>Embu</option>
+              <option>Kitui</option>
+              <option>Machakos</option>
+              <option>Makueni</option>
+              <option>Nyandarua</option>
+              <option>Nyeri</option>
+              <option>Kirinyaga</option>
+              <option>Murang'a</option>
+              <option>Kiambu</option>
+              <option>Turkana</option>
+              <option>West Pokot</option>
+              <option>Samburu</option>
+              <option>Trans Nzoia</option>
+              <option>Uasin Gishu</option>
+              <option>Elgeyo-Marakwet</option>
+              <option>Nandi</option>
+              <option>Baringo</option>
+              <option>Laikipia</option>
+              <option>Nakuru</option>
+              <option>Narok</option>
+              <option>Kajiado</option>
+              <option>Kericho</option>
+              <option>Bomet</option>
+              <option>Kakamega</option>
+              <option>Vihiga</option>
+              <option>Bungoma</option>
+              <option>Busia</option>
+              <option>Siaya</option>
+              <option>Kisumu</option>
+              <option>Homa Bay</option>
+              <option>Migori</option>
+              <option>Kisii</option>
+              <option>Nyamira</option>
+              <option>Nairobi City</option>
+            </select>
+            <div>
+              <label for="category">select category</label>
+              <select class="category" name="category" required>
+                <option value="">select category</option>
+                <option>Roads & potholes</option>
+                <option>Water & sewage</option>
+                <option>Waste Management</option>
+                <option>Sreetlights</option>
+                <option>Drainage issues</option>
+                <option>Public spaces</option>
+                <option value="">Other Issues</option>
+              </select>
+            </div>
+            <label for="media">Upload photo or Video</label>
+            <input type="file" id="media" accept="image / ,video" />
+            <div class="submit-btn">
+              <button type="submit" class="submit-button">submit Report</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

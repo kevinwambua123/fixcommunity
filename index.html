@@ -13,11 +13,11 @@
         <img src="images/logo.jpg" width="50" />
         <span>communityFix</span><br />KENYA
         <ul class="nav-links">
-          <li class="active">Hpme</li>
-          <li>View Reports</li>
-          <li>Report Issue</li>
-          <li>About us</li>
-          <li>contact</li>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="#reports">View Reports</a></li>
+          <li><a href="#report">Report Issue</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
         <div class="nav-btn">
           <button>Login / sign in</button>
@@ -52,7 +52,7 @@
         </div>
 
         <!-- QUICK REPORT FORM -->
-         
+
         <div class="quick-report">
           <h2>Quick Report</h2>
           <p>Report a problem in your area in seconds</p>
@@ -121,10 +121,10 @@
                 <option value="">Other Issues</option>
               </select>
             </div>
-            
+
             <label for="media">Upload photo or Video</label>
-            <input type="file" id="media" accept="image / ,video" >
-              
+            <input type="file" id="media" accept="image / ,video" />
+
             <div class="submit-btn">
               <button type="submit" class="submit-button">submit Report</button>
             </div>
@@ -132,33 +132,99 @@
         </div>
       </section>
       <!-- ISSUE CATEGORY -->
-       <section class="categories">
+      <section class="categories">
         <div class="section-heading">
           <h2>Common Issue Categories</h2>
-          <button>view all categories  &rarr;</button>
+          <button>view all categories &rarr;</button>
         </div>
         <div class="categories-grid">
           <a href="" clss="category-card">
-            <span class="category-icon-road"><img src="images/road.jpg" width="15"></span> 
+            <span class="category-icon-road"
+              ><img src="images/road.jpg" width="15"
+            /></span>
             <h3>Roads & potholes</h3>
           </a>
-           <a href="" class="category-card">
-            <span class="category-icon-water"><img src="images/water.jpg" width="20"></span> 
-            <h3>water & Sewage</h3>
-           </a>
           <a href="" class="category-card">
-            <span class="category-icon-waste"><img src="images/waste.jpg" width="20"></span> 
+            <span class="category-icon-water"
+              ><img src="images/water.jpg" width="20"
+            /></span>
+            <h3>water & Sewage</h3>
+          </a>
+          <a href="" class="category-card">
+            <span class="category-icon-waste"
+              ><img src="images/waste.jpg" width="20"
+            /></span>
             <h3>waste</h3>
           </a>
           <a href="" class="category-card">
-            <span class="category-icon-streetlights"><img src="images/streetlight.jpg" width="20"></span> 
+            <span class="category-icon-streetlights"
+              ><img src="images/streetlight.jpg" width="20"
+            /></span>
             <h3>streetlights</h3>
           </a>
           <a href="" class="category-card">
-            <span class="category-icon-Otherissues"><img src="images/otherspng" width="20"></span> 
+            <span class="category-icon-Otherissues"
+              ><img src="images/otherspng" width="20"
+            /></span>
             <h3>Other issues</h3>
           </a>
         </div>
+      </section>
+      <!-- RECENT REPORTS -->
+      <section class="report-section" id="reports">
+        <div class="section-heading">
+          <h2>Recent Reports</h2>
+          <a href="reports">view all reports &rarr;</a>
+        </div>
+        <div class="reports-grid" id="reportsgrid">
+          <!-- report1 -->
+          <article class="report-card">
+            <img src="images/pothole.png" width="80" class="report-image" />
+            <div class="report-details">
+              <span class="report-category-roads">Roads</span>
+              <h3>large pothole on moi avenue</h3>
+              <p>nairobi county</p>
+              <span class="status-reported"></span>
+            </div>
+          </article>
+          <!-- report2 -->
+          <article class="report-card">
+            <img src="images/sewage.jpg" width="80" class="report-image" />
+            <div class="report-details">
+              <span class="report-category water">Sewage</span>
+              <h3>leaking sewage pipe</h3>
+              <p>kiambu county</p>
+              <span class="status review">Under Review</span>
+            </div>
+          </article>
+          <!-- report3 -->
+          <article class="report-card">
+            <img src="images/waste2.jpg" width="80" class="report-image" />
+            <div class="report-details">
+              <span class="report-category waste">Waste</span>
+              <h3>Overflowing Rubbish</h3>
+              <p>Nakuru county</p>
+              <span class="status progress">In progress</span>
+            </div>
+          </article>
+          <!-- report4 -->
+           <article class="report-card">
+            <img src="images/streetlight.jpg" width="80" class="report-image">
+            <div class="report-details">
+              <span class="report-category lights">Streetlights</span>
+              <h3>Broken streetlights</h3>
+              <p>Uasin Gishu county</p>
+              <span class="status resolved">Resolved</span>
+
+            </div>
+           </article>
+        </div>
+        <p class="sample note">These are demonstration reports ,not verified reports of real community incident.</p>
+      </section>
+      <!-- ABOUT SECTION -->
+       <section class="about-section"id="about">
+        <h2>About CommunityFix</h2>
+        <p
        </section>
     </main>
   </body>

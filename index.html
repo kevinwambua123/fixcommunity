@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CommunityFix</title>
@@ -11,44 +11,43 @@
     <!-- NAVIGATION BAR -->
     <header class="haeder">
       <nav class="navbar">
-        <img src="images/logo.jpg" width="50" />
-        <span>communityFix</span><br />KENYA
-        <ul class="nav-links">
-          <li><a href="/" class="active">Home</a></li>
-          <li><a href="#reports">View Reports</a></li>
-          <li><a href="#report">Report Issue</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-        <div class="nav-btn">
-          <button>Login / sign in</button>
+        <img src="images/logo.jpg" width="100" />
+        <span>communityFix<small>KENYA</small></span>
+        <div class="nav-links">
+          <a href="/" class="active nav-button">Home</a>
+          <a href="#reports" class="nav-button">View Reports</a>
+          <a href="#report" class="nav-button">Report Issue</a>
+          <a href="#about" class="nav-button">About</a>
+          <a href="#contact" class="nav-button">contact</a>
         </div>
+        <a href="signup.html" class="nav-btn">Start Now</a>
       </nav>
     </header>
     <!-- HERO SECTION -->
     <main>
-      <section class="hero">
+      <section class="hero" id="home">
         <div class="hero-content">
-          <h3 class="ligt-green">A CLEANER ,SAFER,BETTER, KENYA</h3>
-          <h2>See a problem.<br />Report it.Help fix it.</h2>
-          <p class="small-text">
+          <h3 class="subtitle">A CLEANER ,SAFER,BETTER, KENYA</h3>
+          <h1>See a problem.<br />Report it.Help fix it.</h1>
+          <p class="hero-description">
             CommunityFix Kenya is a platform where citizens can report<br />community
             issues such as potholes , broken sewage pipes,<br />overflowing ,
             rubbish,damaged streetlights and more.
           </p>
-        </div>
-        <div class="hero-icons">
-          <div class="hero-icon">
-            <img src="images/camera.png" widt="20" />
-            <p>upload<br />photos,videos</p>
-          </div>
-          <div class="hero-icon">
-            <img src="images/location.png" width="20" />
-            <p>Add location<br />(county&Area)</p>
-          </div>
-          <div class="hero-icon">
-            <img src="images/tracking.png" width="20" />
-            <p>Track process<br />in real time</p>
+
+          <div class="hero-features">
+            <div class="hero-feature">
+              <span><img src="images/camera.png" width="20" /></span>
+              <p>upload<br />photos,videos</p>
+            </div>
+            <div class="hero-feature">
+              <span><img src="images/location.png" width="20" /></span>
+              <p>Add location<br />(county&Area)</p>
+            </div>
+            <div class="hero-feature">
+              <span><img src="images/tracking.png" width="20" /></span>
+              <p>Track process<br />in real time</p>
+            </div>
           </div>
         </div>
 
@@ -122,6 +121,24 @@
                 <option value="">Other Issues</option>
               </select>
             </div>
+            <div class="locaion-section">
+              <label class="location-title"> your current location </label>
+              <p id="location-status">click beleow to detect your location</p>
+              <button type="button" id="get-location" class="location-btn">
+                Detect my location
+              </button>
+              <div id="location-details" hidden>
+                <p>location detected successfully!</p>
+                <a
+                  id="map-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener norferrer"
+                >
+                  view location on Google maps
+                </a>
+              </div>
+            </div>
 
             <label for="media">Upload photo or Video</label>
             <input type="file" id="media" accept="image / ,video" />
@@ -132,45 +149,47 @@
           </form>
         </div>
       </section>
+
       <!-- ISSUE CATEGORY -->
-      <section class="categories">
+      <section class="categories-section" id="categories">
         <div class="section-heading">
           <h2>Common Issue Categories</h2>
           <button>view all categories &rarr;</button>
         </div>
         <div class="categories-grid">
-          <a href="" clss="category-card">
-            <span class="category-icon-road"
-              ><img src="images/road.jpg" width="15"
+          <a href="report" class="category-card">
+            <span class="category-icon"
+              ><img src="images/rd.jpeg" width="50"
             /></span>
             <h3>Roads & potholes</h3>
           </a>
-          <a href="" class="category-card">
-            <span class="category-icon-water"
-              ><img src="images/water.jpg" width="20"
+          <a href="report" class="category-card">
+            <span class="category-icon"
+              ><img src="images/water.jpg" width="30"
             /></span>
             <h3>water & Sewage</h3>
           </a>
           <a href="" class="category-card">
-            <span class="category-icon-waste"
-              ><img src="images/waste.jpg" width="20"
+            <span class="category-icon"
+              ><img src="images/waste.jpg" width="30"
             /></span>
             <h3>waste</h3>
           </a>
-          <a href="" class="category-card">
-            <span class="category-icon-streetlights"
-              ><img src="images/streetlight.jpg" width="20"
+          <a href="report" class="category-card">
+            <span class="category-icon"
+              ><img src="images/streetlight.jpg" width="40"
             /></span>
             <h3>streetlights</h3>
           </a>
           <a href="" class="category-card">
-            <span class="category-icon-Otherissues"
-              ><img src="images/otherspng" width="20"
+            <span class="category-icon"
+              ><img src="images/otherspng" width="30"
             /></span>
             <h3>Other issues</h3>
           </a>
         </div>
       </section>
+
       <!-- RECENT REPORTS -->
       <section class="report-section" id="reports">
         <div class="section-heading">
@@ -179,15 +198,15 @@
         </div>
         <div class="reports-grid" id="reportsgrid">
           <!-- report1 -->
-          <article class="report-card">
+          <div class="report-card">
             <img src="images/pothole.png" width="80" class="report-image" />
             <div class="report-details">
               <span class="report-category-roads">Roads</span>
               <h3>large pothole on moi avenue</h3>
               <p>nairobi county</p>
-              <span class="status-reported"></span>
+              <span class="status-reported">Reported</span>
             </div>
-          </article>
+          </div>
           <!-- report2 -->
           <article class="report-card">
             <img src="images/sewage.jpg" width="80" class="report-image" />
@@ -195,7 +214,7 @@
               <span class="report-category water">Sewage</span>
               <h3>leaking sewage pipe</h3>
               <p>kiambu county</p>
-              <span class="status review">Under Review</span>
+              <span class="status-review">Under Review</span>
             </div>
           </article>
           <!-- report3 -->
@@ -205,7 +224,7 @@
               <span class="report-category waste">Waste</span>
               <h3>Overflowing Rubbish</h3>
               <p>Nakuru county</p>
-              <span class="status progress">In progress</span>
+              <span class="status-progress">In progress</span>
             </div>
           </article>
           <!-- report4 -->
@@ -215,11 +234,11 @@
               <span class="report-category lights">Streetlights</span>
               <h3>Broken streetlights</h3>
               <p>Uasin Gishu county</p>
-              <span class="status resolved">Resolved</span>
+              <span class="status-resolved">Resolved</span>
             </div>
           </article>
         </div>
-        <p class="sample note">
+        <p class="sample-note">
           These are demonstration reports ,not verified reports of real
           community incident.
         </p>
@@ -236,28 +255,84 @@
         </p>
         <div class="value-grid">
           <div class="value-card">
-            <img src="images/community.jpeg" width="30" />
+            <img src="images/community.jpeg" width="50" />
             <h3>Stronger Communities</h3>
             <p>working together to improve our neighborhoods</p>
           </div>
           <div class="value-card">
-            <img src="images/environment.jpeg" width="30" />
+            <img src="images/environment.jpeg" width="50" />
             <h3>Environmental Protection</h3>
             <p>Encouraging cleaner and safer neighborhoods</p>
           </div>
           <div class="value-card">
-            <img src="images/safety.jpeg" width="30" />
+            <img src="images/safety.jpeg" width="50" />
             <h3>safer roads</h3>
             <p>Helping residents report potential safety hazards</p>
           </div>
           <div class="value-card">
-            <img src="images/kenya.jpeg" width="30" />
+            <img src="images/kenya.jpeg" width="50" />
             <h3>A Better Kenya</h3>
             <p>Reporting and addressing community issues for a better future</p>
           </div>
         </div>
       </section>
     </main>
+    <!-- DONATION SECTION -->
+    <section class="donation-section" id="donate">
+      <div class="donation-info">
+        <span class="donation-icon">💚</span>
+        <h2>Support Our Community</h2>
+
+        <p>
+          Your contribution helps improve roads, sanitation, drainage and public
+          spaces across Kenya.
+        </p>
+
+        <h3>Every contribution makes a difference!</h3>
+      </div>
+
+      <form class="donation-form" id="donation-form">
+        <h2>Make a Donation</h2>
+
+        <label for="donor-name">Full Name</label>
+        <input
+          type="text"
+          id="donor-name"
+          name="donorName"
+          placeholder="Enter your full name"
+          required
+        />
+
+        <label for="donor-email">Email Address</label>
+        <input
+          type="email"
+          id="donor-email"
+          name="donorEmail"
+          placeholder="Enter your email address"
+          required
+        />
+
+        <label for="donation-amount">Donation Amount (KES)</label>
+        <select id="donation-amount" name="amount" required>
+          <option value="">Choose an amount</option>
+          <option value="500">KSh 500</option>
+          <option value="1000">KSh 1,000</option>
+          <option value="2000">KSh 2,000</option>
+          <option value="5000">KSh 5,000</option>
+        </select>
+
+        <label for="payment-method">Payment Method</label>
+        <select id="payment-method" name="paymentMethod" required>
+          <option value="">Choose payment method</option>
+          <option value="mpesa">M-Pesa</option>
+          <option value="card">Debit/Credit Card</option>
+          <option value="paypal">PayPal</option>
+        </select>
+
+        <button type="submit">💚 Donate Now →</button>
+      </form>
+    </section>
+
     <!-- footer -->
     <footer class="footer" id="contact">
       <div class="footer-content">

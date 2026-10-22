@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CommunityFix</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="organisation-dashboard.style.css">
+    <link rel="stylesheet" href="organisation-dashboard.style.css" />
   </head>
   <body>
     <!-- NAVIGATION BAR -->
-    <header class="haeder">
+    <header class="haeder" id="home">
       <nav class="navbar">
         <img src="images/logo.jpg" width="100" />
-        <span class="black">communityFix<small><br>KENYA</small></span>
+        <span class="black"
+          >communityFix<small><br />KENYA</small></span
+        >
         <div class="nav-links">
-          <a href="/" class="active nav-button">Home</a>
+          <a href="#home" class="active nav-button">Home</a>
           <a href="#reports" class="nav-button">View Reports</a>
-          <a href="#report" class="nav-button">Report Issue</a>
           <a href="#about" class="nav-button">About</a>
-          <a href="#contact" class="nav-button">contact</a>
           <a href="organisation-dashboard.html">organisation dashboard</a>
         </div>
         <a href="signup.html" class="nav-btn">Start Now</a>
@@ -39,7 +39,7 @@
 
           <div class="hero-features">
             <div class="hero-feature">
-              <span><img src="images/camera.png" width="20"id="cam" /></span>
+              <span><img src="images/camera.png" width="20" id="cam" /></span>
               <p>upload<br />photos,videos</p>
             </div>
             <div class="hero-feature">
@@ -143,10 +143,14 @@
             </div>
 
             <label for="media">Upload photo or Video</label>
-            <input type="file" id="media"name="media" accept="image / ,video" />
+            <input
+              type="file"
+              id="media"
+              name="media"
+              accept="image / ,video"
+            />
 
-          
-              <button type="submit" class="submit-button">submit Report</button>
+            <button type="submit" class="submit-button">submit Report</button>
           </form>
         </div>
       </section>
@@ -360,6 +364,5 @@
       </div>
     </footer>
     <script src="js.script"></script>
-  
   </body>
 </html>

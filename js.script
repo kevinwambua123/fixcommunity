@@ -1,2 +1,127 @@
-const reportForm =document.getElemntsbyqueryselector(".report-form")
-const formMessage =document.getElemntsbyqueryselector(".")
+
+const locationBtn = document.getElementById("get-location");
+const locationStatus = document.getElementById("location-status");
+const locationDetails = document.getElementById("location-details");
+const mapLink = document.getElementById("map-link");
+
+locationBtn.addEventListener("click", () => {
+  if (!navigator.geolocation) {
+    locationStatus.textContent = "Location is not supported.";
+    return;
+  }
+
+  locationStatus.textContent = "Detecting location...";
+
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+
+      mapLink.href = `https://www.google.com/maps?q=${latitude},${longitude}`;
+      locationStatus.textContent = "Location detected successfully!";
+      locationDetails.hidden = false;
+    },
+    () => {
+      locationStatus.textContent =
+        "Could not detect location. Allow location permission and try again.";
+    }
+  );
+});
+
+
+const reportForm = document.querySelector(".report-form");
+const mediaInput = document.getElementById("media");
+
+const preview = document.createElement("div");
+preview.id = "media-preview";
+
+
+mediaInput.addEventListener("change", () => {
+  preview.replaceChildren();
+
+  const file = mediaInput.files[0];
+  if (!file) return;
+
+  const url = URL.createObjectURL(file);
+  let element;
+
+  if (file.type.startsWith("image/")) {
+    element = document.createElement("img");
+    element.alt = "Selected report photo";
+  } else if (file.type.startsWith("video/")) {
+    element = document.createElement("video");
+    element.controls = true;
+  } else {
+    preview.textContent = "Please select an image or video.";
+    return;
+  }
+
+  element.src = url;
+  element.style.maxWidth = "100%";
+  element.style.maxHeight = "200px";
+  preview.appendChild(element);
+});
+
+reportForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const county = reportForm.querySelector(".county").value;
+  const category = reportForm.querySelector(".category").value;
+  const file = mediaInput.files[0];
+  const reportsGrid = document.getElementById("reportsgrid");
+
+  const card = document.createElement("article");
+  card.className = "report-card";
+
+  if (file && file.type.startsWith("image/")) {
+    const image = document.createElement("img");
+    image.src = URL.createObjectURL(file);
+    image.alt = "Community issue";
+    image.className = "report-image";
+    card.appendChild(image);
+  } else if (file && file.type.startsWith("video/")) {
+    const video = document.createElement("video");
+    video.src = URL.createObjectURL(file);
+    video.controls = true;
+    video.className = "report-image";
+    card.appendChild(video);
+  }
+
+  const details = document.createElement("div");
+  details.className = "report-details";
+
+  const heading = document.createElement("h3");
+  heading.textContent = category;
+
+  const countyText = document.createElement("p");
+  countyText.textContent = county + " County";
+
+  const status = document.createElement("span");
+  status.className = "status-reported";
+  status.textContent = "Reported";
+
+  details.append(heading, countyText, status);
+  card.appendChild(details);
+
+  reportsGrid.prepend(card);
+
+  alert("Your report has been added to Recent Reports!");
+
+  reportForm.reset();
+  preview.replaceChildren();
+  locationDetails.hidden = true;
+  locationStatus.textContent = "Click below to detect your location.";
+});
+
+
+const donationForm = document.getElementById("donation-form");
+
+donationForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  alert(
+    "Thank you for supporting CommunityFix Kenya! " +
+    "This is a demo. No payment has been made."
+  );
+
+  donationForm.reset();
+});

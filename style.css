@@ -34,7 +34,7 @@ img {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .navbar {
-  background: white;
+  background:hsl(165, 12%, 93%);
   position: fixed;
   top: 0;
   left: 0;
@@ -101,6 +101,11 @@ img {
 .nav-button:hover {
   background-color: #0ca392;
   transform: translateY(-3px);
+}
+.black{
+  color: black;
+  font-size: larger;
+  font-weight: bold;
 }
 
 /* HERO SECTION */
@@ -208,6 +213,7 @@ img {
   font-weight: 600;
   color: #46534a;
   margin-top: 10px;
+  
 }
 .reportform input,
 .reportform textarea .reportform select {
@@ -226,33 +232,26 @@ img {
   padding: 5px;
   background: #fbfdfb;
 }
-.submit-btn {
-  background-color: #1e7070;
-  color: forestgreen;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background 0.3s ease;
-  padding: 15px 15px;
-}
+
 .submit-button:hover {
   background-color: #1f8a83;
   color: #f0eaff;
+ 
 }
-.submit-button: {
-  background-color: #1e7070;
+.submit-button {
+  
   color: forestgreen;
   padding: 10px;
   border: none;
   border-radius: 4px;
+   align-items: center;
+   justify-content: center;
   font-size: 14px;
   cursor: pointer;
   font-weight: 600;
   transition: background 0.3s ease;
 }
+
 .form-message {
   font-size: 14px;
   color: green;
@@ -260,7 +259,7 @@ img {
 }
 /* ISSUE CATEGORY CARDS */
 .categories-section {
-  padding: 100px;
+  
   background-color: white;
 }
 .categories-grid {
@@ -270,12 +269,14 @@ img {
   gap: 20px;
 }
 .category-card {
+  display: grid;
   padding: px 20px;
   border-radius: 8px;
-  background: #f0eaff;
+  background:lab(64.46% -57.21 50.93);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .category-card:hover {
   transform: translateY(-5px);
@@ -305,6 +306,9 @@ img {
 }
 .category-icon img {
   border-radius: 50%;
+}
+.section-heading button{
+  cursor: pointer;
 }
 
 /* RECENT REPORTS */
@@ -813,4 +817,517 @@ img {
 
 #signup-form a:hover {
   text-decoration: underline;
+}
+/* responsiveness images on phones */
+@media(max-width:768px){
+  .reports-grid.report-card>img,
+  .reports-grid.report-card>video{
+    width: 100%;
+    height: 140;
+    object-fit: cover;
+  }
+}
+/* TABLET:769PX T0 102PX */
+@media (max-width:1024px){
+  .navbar{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* 1. GLOBAL RESPONSIVE SETTINGS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-wrap: break-word;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+  font: inherit;
+}
+
+main,
+section,
+footer,
+header {
+  min-width: 0;
+}
+
+section {
+  scroll-margin-top: 90px;
+}
+
+/* 2. NAVIGATION */
+.navbar {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 12px 3%;
+  gap: 16px;
+}
+
+.navbar > img {
+  flex-shrink: 0;
+  width: 65px;
+  height: auto;
+}
+
+.navbar > span {
+  flex-shrink: 0;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav-btn {
+  margin-right: 0;
+  flex-shrink: 0;
+}
+
+/* 3. HERO AND QUICK REPORT */
+.hero {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: clamp(20px, 3vw, 50px);
+  padding: 120px 4% 50px;
+  min-height: auto;
+}
+
+.hero-content,
+.quick-report {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 3.5vw, 52px);
+}
+
+.hero-description {
+  max-width: 100%;
+}
+
+.quick-report {
+  width: 100%;
+  margin: 0;
+  justify-self: stretch;
+  padding: clamp(18px, 2vw, 35px);
+}
+
+.report-form {
+  min-width: 0;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  min-width: 0;
+}
+
+/* 4. ISSUE CATEGORIES */
+.categories-section {
+  padding: clamp(30px, 5vw, 80px) 4%;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.category-card {
+  min-width: 0;
+  padding: 18px;
+}
+
+.category-card img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 5. RECENT REPORTS */
+.reports-section,
+.report-section {
+  padding: clamp(30px, 5vw, 80px) 4%;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.report-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.reports-grid .report-card > img,
+.reports-grid .report-card > video {
+  width: 100%;
+  height: clamp(140px, 13vw, 220px);
+  object-fit: cover;
+}
+
+.report-details {
+  min-width: 0;
+  padding: 15px;
+}
+
+.report-details h3,
+.report-details p {
+  overflow-wrap: anywhere;
+}
+
+/* 6. ABOUT AND VALUES */
+.about-section {
+  padding: clamp(30px, 5vw, 80px) 4%;
+}
+
+.about-section > p {
+  width: 100%;
+  max-width: 850px;
+}
+
+.value-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.value-card {
+  min-width: 0;
+}
+
+/* 7. DONATION SECTION */
+.donation-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 4vw, 50px);
+  padding: clamp(30px, 5vw, 80px) 4%;
+}
+
+.donation-info,
+.donation-form {
+  min-width: 0;
+  width: 100%;
+}
+
+.donation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.donation-form input,
+.donation-form select,
+.donation-form button {
+  width: 100%;
+  padding: 12px;
+}
+
+/* 8. FOOTER */
+.footer {
+  padding: 40px 4% 0;
+}
+
+.footer-content {
+  width: 100%;
+  grid-template-columns: 1.3fr 0.8fr 1fr;
+  gap: 30px;
+}
+
+.footer-content > * {
+  min-width: 0;
+}
+
+.footer img {
+  max-width: 100%;
+}
+
+/* ==========================================
+   TABLETS: 769px TO 1024px
+   ========================================== */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+}
+
+/* ==========================================
+   PHONES: 768px AND BELOW
+   ========================================== */
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    flex-direction: row;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .navbar > img {
+    width: 48px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 35px 18px;
+    gap: 25px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 7vw, 42px);
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .hero-features,
+  .hero-buttons {
+    flex-wrap: wrap;
+  }
+
+  .quick-report {
+    margin: 0;
+    padding: 22px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .reports-grid .report-card > img,
+  .reports-grid .report-card > video {
+    height: 150px;
+  }
+
+  .value-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .donation-section {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .footer-content {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 25px;
+  }
+}
+
+/* ==========================================
+   SMALL PHONES: 480px AND BELOW
+   ========================================== */
+@media (max-width: 480px) {
+  .navbar > img {
+    width: 40px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    padding: 7px;
+  }
+
+  .hero {
+    padding: 25px 14px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .quick-report {
+    padding: 16px;
+  }
+
+  .categories-section,
+  .reports-section,
+  .report-section {
+    padding: 30px 14px;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .category-card {
+    padding: 12px;
+  }
+
+  .category-card h3 {
+    font-size: 14px;
+  }
+
+  .reports-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reports-grid .report-card > img,
+  .reports-grid .report-card > video {
+    height: 190px;
+  }
+
+  .value-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .donation-section {
+    padding: 30px 14px;
+  }
+
+  .footer {
+    padding: 30px 18px 0;
+  }
+}
+
+/* ==========================================
+   LARGE DESKTOPS AND TV SCREENS: 1440px+
+   ========================================== */
+@media (min-width: 1440px) {
+  body {
+    font-size: 18px;
+  }
+
+  .navbar {
+    padding-left: max(4%, calc((100vw - 1800px) / 2));
+    padding-right: max(4%, calc((100vw - 1800px) / 2));
+  }
+
+  .hero,
+  .categories-section,
+  .reports-section,
+  .report-section,
+  .about-section,
+  .donation-section {
+    padding-left: max(5%, calc((100vw - 1800px) / 2));
+    padding-right: max(5%, calc((100vw - 1800px) / 2));
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 3vw, 68px);
+  }
+
+  .hero-description {
+    font-size: 20px;
+  }
+
+  .categories-grid {
+    gap: 24px;
+  }
+
+  .reports-grid {
+    gap: 25px;
+  }
+
+  .report-details {
+    padding: 20px;
+  }
+
+  .footer-content {
+    max-width: 1800px;
+  }
+}
+
+/* EXTRA-WIDE TV SCREENS: 1920px+ */
+@media (min-width: 1920px) {
+  body {
+    font-size: 20px;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+  }
+
+  .quick-report {
+    max-width: 650px;
+    justify-self: end;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }

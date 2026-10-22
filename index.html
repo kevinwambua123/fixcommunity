@@ -12,7 +12,7 @@
     <header class="haeder">
       <nav class="navbar">
         <img src="images/logo.jpg" width="100" />
-        <span>communityFix<small>KENYA</small></span>
+        <span class="black">communityFix<small><br>KENYA</small></span>
         <div class="nav-links">
           <a href="/" class="active nav-button">Home</a>
           <a href="#reports" class="nav-button">View Reports</a>
@@ -141,11 +141,10 @@
             </div>
 
             <label for="media">Upload photo or Video</label>
-            <input type="file" id="media" accept="image / ,video" />
+            <input type="file" id="media"name="media" accept="image / ,video" />
 
-            <div class="submit-btn">
+          
               <button type="submit" class="submit-button">submit Report</button>
-            </div>
           </form>
         </div>
       </section>
@@ -154,7 +153,7 @@
       <section class="categories-section" id="categories">
         <div class="section-heading">
           <h2>Common Issue Categories</h2>
-          <button>view all categories &rarr;</button>
+          <a href="categories">view all categories &rarr;</a>
         </div>
         <div class="categories-grid">
           <a href="report" class="category-card">
@@ -358,6 +357,6 @@
         </p>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="js.script"></script>
   </body>
 </html>

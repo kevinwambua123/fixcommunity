@@ -24,7 +24,7 @@ img {
   transition: 0.3s;
 }
 
-/* NAVIGATION BAR */
+
 .header {
   position: fixed;
 
@@ -108,7 +108,7 @@ img {
   font-weight: bold;
 }
 
-/* HERO SECTION */
+
 .hero {
   padding-top: 3em;
   min-height: 650px;
@@ -176,7 +176,6 @@ img {
   display: flex;
   gap: 20px;
 }
-/* QUICK REPORT FORM */
 .quick-report {
   background: darkturquoise;
   color: white;
@@ -257,7 +256,8 @@ img {
   color: green;
   margin-top: 10px;
 }
-/* ISSUE CATEGORY CARDS */
+
+
 .categories-section {
   
   background-color: white;
@@ -272,7 +272,7 @@ img {
   display: grid;
   padding: px 20px;
   border-radius: 8px;
-  background:lab(64.46% -57.21 50.93);
+  background:#2dd4bf;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -311,7 +311,7 @@ img {
   cursor: pointer;
 }
 
-/* RECENT REPORTS */
+
 .reports-section {
   padding: 60px 20px;
   background: var(--white);
@@ -382,7 +382,7 @@ img {
   text-align: center;
 }
 
-/* ABOUT SECTION */
+
 .about-section {
   text-align: center;
   background-color: gray;
@@ -422,7 +422,7 @@ img {
   border-radius: 50%;
 }
 
-/* FOOTER */
+
 .footer {
   padding: 55px 4% 0;
   background: #102d1b;
@@ -477,7 +477,7 @@ img {
 .section-heading button:hover {
   text-decoration: underline #1d4ed8;
 }
-/* LIVE LOCATION SECTION */
+
 .location-section {
   padding: 14px;
   margin: 12px 0;
@@ -537,7 +537,7 @@ img {
 #map-link:hover {
   text-decoration: underline;
 }
-/* DONATION SECTION */
+
 .donation-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -631,15 +631,13 @@ img {
   background: #076d57;
 }
 
-/* LOGIN */
 
-/* MAIN CONTAINER */
 .container {
   width: 100%;
   max-width: 420px;
 }
 
-/* LOGIN CARD */
+
 .login {
   background: #ffffff;
   padding: 40px 30px;
@@ -647,7 +645,7 @@ img {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* HEADING */
+
 .login h1 {
   text-align: center;
   color: #1e293b;
@@ -655,7 +653,7 @@ img {
   margin-bottom: 30px;
 }
 
-/* FORM LABELS */
+
 .login label {
   display: block;
   color: #334155;
@@ -664,7 +662,7 @@ img {
   margin-bottom: 8px;
 }
 
-/* INPUT FIELDS */
+
 .login input {
   width: 100%;
   padding: 13px 14px;
@@ -676,13 +674,13 @@ img {
   transition: 0.3s ease;
 }
 
-/* INPUT FOCUS EFFECT */
+
 .login input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* LOGIN BUTTON */
+
 .log-btn {
   width: 100%;
   padding: 14px;
@@ -697,13 +695,13 @@ img {
   margin-bottom: 22px;
 }
 
-/* BUTTON HOVER */
+
 .log-btn:hover {
   background: #1d4ed8;
   transform: translateY(-2px);
 }
 
-/* SIGN-UP TEXT */
+
 #login-form {
   color: #64748b;
   font-size: 14px;
@@ -720,15 +718,14 @@ img {
   text-decoration: underline;
 }
 
-/* SIGN UP */
-/* MAIN CONTAINER */
+
 .container {
   width: 100%;
   max-width: 450px;
   margin: auto;
 }
 
-/* SIGNUP SECTION */
+
 .login {
   background: #ffffff;
   padding: 40px 35px;
@@ -736,7 +733,7 @@ img {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
-/* HEADING */
+
 .login h1 {
   text-align: center;
   font-size: 28px;
@@ -744,13 +741,12 @@ img {
   margin-bottom: 30px;
 }
 
-/* FORM */
+
 #signup-form {
   display: flex;
   flex-direction: column;
 }
 
-/* LABELS */
 #signup-form label {
   font-size: 14px;
   font-weight: bold;
@@ -758,7 +754,7 @@ img {
   margin-bottom: 8px;
 }
 
-/* INPUT FIELDS */
+
 #signup-form input {
   width: 100%;
   padding: 13px 15px;
@@ -772,13 +768,13 @@ img {
     box-shadow 0.3s;
 }
 
-/* INPUT FOCUS */
+
 #signup-form input:focus {
   border-color: #2563eb;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
-/* SIGNUP BUTTON */
+
 .log-btn {
   width: 100%;
   padding: 14px;
@@ -794,19 +790,19 @@ img {
     transform 0.2s;
 }
 
-/* BUTTON HOVER */
+
 .log-btn:hover {
   background: #1d4ed8;
   transform: translateY(-2px);
 }
 
-/* LOGIN TEXT */
+
 #signup-form {
   color: #64748b;
   font-size: 14px;
 }
 
-/* LOGIN LINK */
+
 #signup-form a {
   color: #2563eb;
   font-weight: bold;
@@ -817,6 +813,19 @@ img {
 
 #signup-form a:hover {
   text-decoration: underline;
+}
+.home-btn{
+  display: inline;
+  padding: 10px 20px;
+  background-color:darkcyan;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3 ease;
+}
+.home-btn :hover{
+  background-
 }
 /* responsiveness images on phones */
 @media(max-width:768px){
@@ -836,50 +845,7 @@ img {
 }
 
 
-/* 1. GLOBAL RESPONSIVE SETTINGS */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  overflow-wrap: break-word;
-}
-
-img,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-select,
-textarea,
-button {
-  max-width: 100%;
-  font: inherit;
-}
-
-main,
-section,
-footer,
-header {
-  min-width: 0;
-}
-
-section {
-  scroll-margin-top: 90px;
-}
-
-/* 2. NAVIGATION */
 .navbar {
   width: 100%;
   min-width: 0;
@@ -908,7 +874,7 @@ section {
   flex-shrink: 0;
 }
 
-/* 3. HERO AND QUICK REPORT */
+
 .hero {
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   gap: clamp(20px, 3vw, 50px);
@@ -948,7 +914,7 @@ section {
   min-width: 0;
 }
 
-/* 4. ISSUE CATEGORIES */
+
 .categories-section {
   padding: clamp(30px, 5vw, 80px) 4%;
 }
@@ -969,7 +935,7 @@ section {
   object-fit: contain;
 }
 
-/* 5. RECENT REPORTS */
+
 .reports-section,
 .report-section {
   padding: clamp(30px, 5vw, 80px) 4%;
@@ -1003,7 +969,6 @@ section {
   overflow-wrap: anywhere;
 }
 
-/* 6. ABOUT AND VALUES */
 .about-section {
   padding: clamp(30px, 5vw, 80px) 4%;
 }
@@ -1022,7 +987,7 @@ section {
   min-width: 0;
 }
 
-/* 7. DONATION SECTION */
+
 .donation-section {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1049,7 +1014,7 @@ section {
   padding: 12px;
 }
 
-/* 8. FOOTER */
+
 .footer {
   padding: 40px 4% 0;
 }
@@ -1103,9 +1068,9 @@ section {
   }
 }
 
-/* ==========================================
-   PHONES: 768px AND BELOW
-   ========================================== */
+
+/*
+   PHONES: 768px AND BELOW */
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -1331,3 +1296,4 @@ section {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+
